@@ -1,7 +1,7 @@
 TorqueBox.configure do
-#  service SimpleService
+  service SimpleService
   
-  job SimpleJob do
-      cron '*/5 * * * * ?'
-  end
+#  job SimpleJob do
+#      cron '*/5 * * * * ?'
+#  end
 end

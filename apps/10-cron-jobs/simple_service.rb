@@ -4,7 +4,7 @@ class SimpleService
   end
 
   def start
-    TorqueBox::ScheduledJob.schedule('SimpleJob', '*/10 * * * * ?')    
+    TorqueBox::ScheduledJob.schedule('SimpleJob', '*/2 * * * * ?')    
   end
 
   def stop

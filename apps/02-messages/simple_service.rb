@@ -5,7 +5,7 @@ class SimpleService
   end
 
   def start
-    @queue.publish("Test")
+    @queue.publish("GeeCON")
     @queue.publish(:this => "is", :a => "Ruby", :hash => true)
 
     while (message = @queue.receive(:timeout => 5_000)) do

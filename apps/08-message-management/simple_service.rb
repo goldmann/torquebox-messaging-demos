@@ -6,7 +6,7 @@ class SimpleService
 
   def start
     #count
-    # remove
+    #emove
     move
   end
 

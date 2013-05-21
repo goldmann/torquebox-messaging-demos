@@ -608,22 +608,6 @@ end</code></pre>
 </section>
 
 <section>
-  <h2>Deployment descriptors</h2>
-  <pre><code class="ruby">TorqueBox.configure do
-  job SimpleJob do
-    cron '*/5 * * * * ?'
-    name 'mail.notifier'      # Optional
-    description 'Simple job'  # Optional
-    timeout '5s'              # Optional, when the job should timeout
-    config do                 # Optional, data injected to constructor
-      foo 'bar'
-    end
-  end
-end</code></pre>
-  <pre style="text-align: right;">torquebox.rb</pre>
-</section>
-
-<section>
   <h2>In the code</h2>
   <pre><code class="ruby">TorqueBox::ScheduledJob.schedule(
   "SimpleJob", 
@@ -633,6 +617,16 @@ end</code></pre>
   :timeout      =&gt; '5s',
   :config       =&gt; { 'foo' =&gt; 'bar' }
 )</code></pre>
+</section>
+
+<section>
+  <h2>Deployment descriptors</h2>
+  <pre><code class="ruby">TorqueBox.configure do
+  job SimpleJob do
+    cron '*/5 * * * * ?'
+  end
+end</code></pre>
+  <pre style="text-align: right;">torquebox.rb</pre>
 </section>
 
 <section>

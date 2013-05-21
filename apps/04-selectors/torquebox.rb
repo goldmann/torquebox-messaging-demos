@@ -4,8 +4,8 @@ TorqueBox.configure do
   queue '/queues/selector' do
     durable false
 
-    #processor SimpleProcessor do
-    #  selector "score < 5"
-    #end
+    processor SimpleProcessor do
+      selector "score < 5"
+    end
   end
 end

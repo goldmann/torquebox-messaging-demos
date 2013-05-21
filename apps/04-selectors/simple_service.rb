@@ -9,7 +9,7 @@ class SimpleService
       @queue.publish("Message with #{v}", :properties => { 'score' => v })
     end
 
-    Thread.new { receive }
+    #Thread.new { receive }
   end
 
   def receive
